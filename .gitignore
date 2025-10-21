@@ -1,0 +1,11 @@
+# Project exclude paths
+.kotlin
+.idea
+/.gradle/
+/app/build/
+/app/build/intermediates/javac/debug/compileDebugJavaWithJavac/classes/
+/app/build/intermediates/javac/debugAndroidTest/compileDebugAndroidTestJavaWithJavac/classes/
+/build/
+app/release
+/local.properties
+/app/local.properties
