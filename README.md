@@ -78,10 +78,9 @@ This project uses the **LocationIQ API** for geocoding services. You must obtain
 
 *(Please replace this section with high-quality screenshots/GIFs of your Compose UI to showcase the design.)*
 
-| Home Screen (Current Weather) | Search Screen (Autocomplete) |
-| :---: | :---: |
-| [Placeholder: Screenshot of the main weather screen] | [Placeholder: Screenshot of the city search functionality] |
 
+| [screenshots/preview1.jpg](screenshots/preview1.jpg) | [screenshots/preview2.jpg](screenshots/preview1.jpg) |
+| :---: | :---: |
 ---
 
 ## 🤝 Contribution
