@@ -2,6 +2,13 @@
 
 A modern, highly-optimized Android weather application built using **Kotlin**, **Jetpack Compose**, and structured around the principles of **Clean Architecture** and **MVI (Model-View-Intent)**. The app provides real-time weather data and robust location search capabilities.
 
+## ⬇️ Download
+
+The latest stable version of the app is available for direct download via the GitHub Releases page.
+
+[![GitHub release](https://img.shields.io/github/v/release/amirr-sharifi/WeatherApp-jetpackCompose?style=for-the-badge&logo=github&label=Latest%20Release)](https://github.com/amirr-sharifi/WeatherApp-jetpackCompose/releases/latest)
+[![Download APK](https://img.shields.io/badge/Download-Latest%20APK-20A45B?style=for-the-badge&logo=android&logoColor=white)](https://github.com/amirr-sharifi/WeatherApp-jetpackCompose/releases/latest/download/wethear.app.release.apk)
+
 ## ✨ Key Features
 
 * **Current Location Tracking:** Automatically determines the user's location via the device's location services (`LocationTracker` using Google Play Services) and uses Reverse Geocoding via LocationIQ to identify the current city name.
