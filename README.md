@@ -7,7 +7,7 @@ A modern, highly-optimized Android weather application built using **Kotlin**, *
 The latest stable version of the app is available for direct download via the GitHub Releases page.
 
 [![GitHub release](https://img.shields.io/github/v/release/amirr-sharifi/WeatherApp-jetpackCompose?style=for-the-badge&logo=github&label=Latest%20Release)](https://github.com/amirr-sharifi/WeatherApp-jetpackCompose/releases/latest)
-[![Download APK](https://img.shields.io/badge/Download-Latest%20APK-20A45B?style=for-the-badge&logo=android&logoColor=white)](https://github.com/amirr-sharifi/WeatherApp-jetpackCompose/releases/latest/download/wethear.app.release.apk)
+[![Download APK](https://img.shields.io/badge/Download-Latest%20APK-20A45B?style=for-the-badge&logo=android&logoColor=white)](https://github.com/amirr-sharifi/WeatherApp-jetpackCompose/releases/download/V1.0.0/weather.app.release.apk)
 
 ## ✨ Key Features
 
