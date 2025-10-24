@@ -66,7 +66,7 @@ This project uses the **LocationIQ API** for geocoding services. You must obtain
 
 1.  Clone the repository:
     ```bash
-    git clone [Placeholder: Insert your GitHub Repo URL here]
+    git clone https://github.com/amirr-sharifi/WeatherApp-jetpackCompose.git
     ```
 2.  Open the project in Android Studio.
 3.  Ensure your `local.properties` file is set up correctly (see above).
@@ -74,12 +74,10 @@ This project uses the **LocationIQ API** for geocoding services. You must obtain
 
 ---
 
-## 📸 Screenshots (Placeholder)
-
-*(Please replace this section with high-quality screenshots/GIFs of your Compose UI to showcase the design.)*
+## 📸 Screenshots
 
 
-| [screenshots/preview1.jpg](screenshots/preview1.jpg) | [screenshots/preview2.jpg](screenshots/preview1.jpg) |
+| ![shot1](screenshots/preview1.jpg) | ![shot2](screenshots/preview2.jpg) |
 | :---: | :---: |
 ---
 
@@ -87,8 +85,4 @@ This project uses the **LocationIQ API** for geocoding services. You must obtain
 
 Contributions are highly encouraged! Please feel free to open an issue to discuss features or submit a pull request with improvements.
 
----
 
-## 📄 License
-
-[Placeholder: Insert Project License here (e.g., MIT, Apache 2.0)]
