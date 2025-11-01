@@ -14,39 +14,33 @@ import org.threeten.bp.LocalDateTime
 import org.threeten.bp.LocalTime
 import org.threeten.bp.format.DateTimeFormatter
 
-private val timeFormatter = DateTimeFormatter.ofPattern("EEEE : dd/MM")
-
 private data class IndexedWeatherData(
     val index: Int,
     val data: FutureHourlyWeatherData,
 )
-
 
 fun WeatherDataDto.toHourlyWeatherDataMap(): Map<Int, List<FutureHourlyWeatherData>> {
     return time.mapIndexed { index, time ->
         IndexedWeatherData(
             index = index,
             data = FutureHourlyWeatherData(
-                time = LocalDateTime.parse(time, DateTimeFormatter.ISO_DATE_TIME).toLocalTime().format(
-                    DateTimeFormatter.ISO_LOCAL_TIME),
+                time = time,
                 temperature = temperatures[index],
                 weatherTypeCode = weatherCode[index],
             )
         )
     }.groupBy {
         it.index / 24
-    }.mapValues {
-        it.value.map { it.data }
+    }.mapValues {mapEntries->
+        mapEntries.value.map { it.data }
     }
 }
 
 
 fun CurrentWeatherDataDto.toCurrentWeatherData(): CurrentWeatherData {
 
-    Log.e("Weather", "toCurrentWeatherData: ${this.time}", )
     return CurrentWeatherData(
-        time = LocalDateTime.parse(time, DateTimeFormatter.ISO_DATE_TIME).toLocalTime().format(
-            DateTimeFormatter.ISO_LOCAL_TIME),
+        time = time,
         temperature = temperature,
         weatherTypeCode = weatherCode ?: 0,
         humidity = humidity,

@@ -43,6 +43,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import kotlinx.coroutines.launch
+import org.threeten.bp.LocalDateTime
 import org.threeten.bp.LocalTime
 import org.threeten.bp.format.DateTimeFormatter
 import kotlin.math.roundToInt
@@ -230,10 +231,12 @@ fun BottomSheetContent(
     ) {
 
         weatherDataPerDay.values.drop(2).forEach { list ->
-            val currentDate = list.first().time
+            val currentDate = LocalDateTime.parse(list.first().time, DateTimeFormatter.ISO_DATE_TIME).toLocalDate()
+            val dateFormatter =DateTimeFormatter.ofPattern("EEEE : dd/MM")
             item(key = list.hashCode()) {
+                val dayTitle = currentDate.format(dateFormatter)
                 Text(
-                    currentDate,
+                    dayTitle,
                     fontSize = MaterialTheme.typography.titleSmall.fontSize,
                     color = MaterialTheme.colorScheme.onSurface
                 )
@@ -243,7 +246,7 @@ fun BottomSheetContent(
                 LazyRow(modifier = Modifier.fillMaxWidth()) {
                     items(list) {
                         HourlyDetailCard(
-                            time = LocalTime.parse(it.time, DateTimeFormatter.ISO_LOCAL_TIME),
+                            time =  LocalDateTime.parse(it.time, DateTimeFormatter.ISO_DATE_TIME).toLocalTime(),
                             contentColor = contentColor,
                             cardBackgroundColor = cardBackgroundColor,
                             weatherType = WeatherType.fromWMO(it.weatherTypeCode),

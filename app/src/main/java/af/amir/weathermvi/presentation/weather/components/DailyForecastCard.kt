@@ -29,7 +29,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import org.threeten.bp.LocalDateTime
 import org.threeten.bp.LocalTime
+import org.threeten.bp.format.DateTimeFormatter
 import kotlin.math.roundToInt
 
 
@@ -87,7 +89,7 @@ fun DailyForecastCard(
         LazyRow(modifier = Modifier.fillMaxWidth()) {
             items(hourlyDetailList) {
                 HourlyDetailCard(
-                    time = LocalTime.parse(it.time),
+                    time = LocalDateTime.parse(it.time, DateTimeFormatter.ISO_DATE_TIME).toLocalTime(),
                     contentColor = contentColor,
                     cardBackgroundColor = cardBackgroundColor,
                     weatherType = WeatherType.fromWMO(it.weatherTypeCode),

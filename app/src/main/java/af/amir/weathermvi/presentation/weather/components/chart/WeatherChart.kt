@@ -42,6 +42,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
+import org.threeten.bp.LocalDateTime
 import org.threeten.bp.LocalTime
 import org.threeten.bp.format.DateTimeFormatter
 import kotlin.math.pow
@@ -212,5 +213,6 @@ fun WeatherChart(
 
 
 private fun FutureHourlyWeatherData.toHourlyTemperatureChartModel(): HourlyTemperatureChartModel {
-    return HourlyTemperatureChartModel(LocalTime.parse(time, DateTimeFormatter.ISO_LOCAL_TIME ), temperature.toFloat())
+    val currentTime = LocalDateTime.parse(time , DateTimeFormatter.ISO_DATE_TIME).toLocalTime()
+    return HourlyTemperatureChartModel(currentTime, temperature.toFloat())
 }

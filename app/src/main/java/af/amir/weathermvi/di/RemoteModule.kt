@@ -1,12 +1,7 @@
 package af.amir.weathermvi.di
 
-import af.amir.weathermvi.data.local.WeatherDatabase
 import af.amir.weathermvi.data.remote.locationIQ.LocationIQApi
 import af.amir.weathermvi.data.remote.weather.WeatherApi
-import android.app.Application
-import androidx.room.Room
-import com.google.android.gms.location.FusedLocationProviderClient
-import com.google.android.gms.location.LocationServices
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -17,7 +12,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object BaseModuleAppModule {
+object RemoteModule {
 
     @Provides
     @Singleton
@@ -41,11 +36,7 @@ object BaseModuleAppModule {
 
     }
 
-    @Provides
-    @Singleton
-    fun provideFusedLocationProviderClient(app: Application): FusedLocationProviderClient {
-        return LocationServices.getFusedLocationProviderClient(app)
-    }
+
 
 
 }
