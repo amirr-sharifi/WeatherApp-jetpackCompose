@@ -9,6 +9,17 @@ The latest stable version of the app is available for direct download via the Gi
 [![GitHub release](https://img.shields.io/github/v/release/amirr-sharifi/WeatherApp-jetpackCompose?style=for-the-badge&logo=github&label=Latest%20Release)](https://github.com/amirr-sharifi/WeatherApp-jetpackCompose/releases/latest)
 [![Download APK](https://img.shields.io/badge/Download-Latest%20APK-20A45B?style=for-the-badge&logo=android&logoColor=white)](https://github.com/amirr-sharifi/WeatherApp-jetpackCompose/releases/download/V1.0.0/weather.app.release.apk)
 
+
+
+---
+
+## 📸 Screenshots
+
+
+| ![shot1](screenshots/preview1.jpg) | ![shot2](screenshots/preview2.jpg) |
+| :---: | :---: |
+---
+
 ## ✨ Key Features
 
 * **Current Location Tracking:** Automatically determines the user's location via the device's location services (`LocationTracker` using Google Play Services) and uses Reverse Geocoding via LocationIQ to identify the current city name.
@@ -79,14 +90,6 @@ This project uses the **LocationIQ API** for geocoding services. You must obtain
 3.  Ensure your `local.properties` file is set up correctly (see above).
 4.  Build and run the application.
 
----
-
-## 📸 Screenshots
-
-
-| ![shot1](screenshots/preview1.jpg) | ![shot2](screenshots/preview2.jpg) |
-| :---: | :---: |
----
 
 ## 🤝 Contribution
 
